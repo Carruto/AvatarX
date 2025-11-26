@@ -1,77 +1,163 @@
-## MICROSOFT ROCKETBOX AVATAR LIBRARY
-The Microsoft Rocketbox Avatar library consists of 115 characters and avatars fully rigged and with high definition that was developed over the course of 10 years. The diversity of the characters and the quality of the rigging together with a relatively low-poly meshes, makes this library the go-to asset among research laboratories worldwide from crowd simulation to real-time avatar embodiment and social Virtual Reality (VR). Ever since their launch, laboratories around the globe have been using the library and many of the lead authors in the VR community have extensively used these avatars during their research.
+# AvatarX
 
-The announcement about the release here> https://www.microsoft.com/en-us/research/blog/microsoft-rocketbox-avatar-library-now-available-for-research-and-academic-use/
+**AvatarX is an enhanced, reorganized version of the Microsoft Rocketbox
+Avatar Library --- optimized, modernized, and ready for game engines,
+simulation, VR, and AI-driven characters.**
 
-This release goes together with a paper that highlights and documents the creation of the library and reviews the research done with rigged avatars as well as explains the importance of having rigged avatars for Virtual Reality. If you are using this library for research you should consider citing it.
+AvatarX builds on the original **115 fully-rigged Rocketbox avatars**, a
+collection developed over more than 10 years and widely used by research
+laboratories worldwide. Thanks to their consistent rigs, relatively
+low-poly meshes, and broad diversity, Rocketbox avatars became a
+standard for:
 
-_Mar Gonzalez-Franco, Eyal Ofek, Ye Pan,  Angus Antley, Anthony Steed, Bernhard Spanlang,  Antonella Maselli, Domna Banakou, Nuria Pelechano, Sergio Orts Escolano, Veronica Orvahlo, Laura Trutoiu, Markus Wojcik, Maria V. Sanchez-Vives, Jeremy Bailenson, Mel Slater, and Jaron Lanier 
-**"The Rocketbox library and the utility of freely available rigged avatars."** Frontiers in Virtual Reality DOI: [10.3389/frvir.2020.561558](https://www.frontiersin.org/articles/10.3389/frvir.2020.561558/abstract)_
+-   Crowd simulation\
+-   Real-time embodied avatars\
+-   Social VR\
+-   Behavioral research\
+-   AI agent embodiment\
+-   Digital twin systems\
+-   Academic virtual reality studies
 
-[![AvatarsSample](Docs/AvatarsSample.jpg?raw=true)](https://www.youtube.com/watch?v=43OWnUQH_p4)
-https://www.youtube.com/watch?v=43OWnUQH_p4
+AvatarX preserves this important foundation while providing a **clean
+structure, updated metadata, engine-ready organization**, and optional
+tools to make the avatars easier to use in modern production pipelines.
 
-## UPDATES
-6/2022: Release of ARkit compatible blendshapes. Contribution by Fang Ma and Matias Volonte
+------------------------------------------------------------------------
 
-4/2022: Release of 417 animations compatible with the Microsoft Rocketbox Avatars (in Assets/Animations)
+## 🔍 Research Background
 
-3/2022: Release of a new library: the Headbox to do facial blendshape animations on the avatars https://github.com/openVRlab/Headbox
+The Rocketbox library has been cited extensively in VR, simulation, and
+cognitive science research.
 
-2/2022: Release of avatars with facial blendshapes (15 visemes, 48 FACS, 30 for the Vive facial tracker).
+If you use AvatarX in academic work, please cite the original Rocketbox
+paper:
 
-2/2021: Added Unreal batch importer tool. Contribution by Joachim Tesch
+**The Rocketbox library and the utility of freely available rigged
+avatars**\
+Mar Gonzalez-Franco, Eyal Ofek, Ye Pan, Angus Antley, Anthony Steed,
+Bernhard Spanlang, Antonella Maselli, Domna Banakou, Nuria Pelechano,
+Sergio Orts Escolano, Veronica Orvalho, Laura Trutoiu, Markus Wojcik,
+Maria V. Sanchez-Vives, Jeremy Bailenson, and Jaron Lanier\
+Frontiers in Virtual Reality (2020)\
+DOI:
+https://www.frontiersin.org/articles/10.3389/frvir.2020.561558/abstract
 
-12/2020: Release of a new library: the Movebox for Microsoft Rocketbox to animate the avatars https://github.com/microsoft/MoveBox-for-Microsoft-Rocketbox
+Original Microsoft announcement:\
+https://www.microsoft.com/en-us/research/blog/microsoft-rocketbox-avatar-library-now-available-for-research-and-academic-use/
 
-12/2020: Updated license to MIT. 
-## Setup
-The FixRocketboxMaxImport.cs script under “Assets/Editor” needs to go in “Assets/Editor”  in the Unity project. This will fix the import of the 3dsMax materials to Unity. I.e. Max materials assume that diffuse material was set by the texture, whereas Unity multiplies the texture colour with the flat colour. Second Unity's transparent  materials still show specular highlights and thus hair looks like glass sheets. The material mode "Fade" goes to full transparent. The import tool also selects  the highest resolution mesh as being activated by default.
-By editing this file you might choose another poly level (they are "hipoly", "midpoly", "lowpoly" and "ultralowpoly") Or you could choose not to import by changing OnPreprocessMeshHierarchy.
+------------------------------------------------------------------------
 
-The FixRocketboxMaxImport was first contributed by Prof. Anthony Steed from University College London. 
-In a more recent version we have updated the import tool to set the avatars into T-pose and reorganize the bones to optimize for the Unity humanoid rig.
- 
-## Running the sample
+## ✨ Improvements in AvatarX
 
-Import the desired avatar folder (including fbx files and textures of the avatar) to your unity project "Assets" folder.
+AvatarX reorganizes and enhances the original library:
 
-Once the files are on the correct unity folders project you can open Unity and include the avatar to the scene.
+-   Clean, modern folder structure\
+-   Consistent file naming\
+-   Unity-ready and engine-agnostic project layout\
+-   Updated rig notes, expressions, blendshape documentation\
+-   Optional import helpers for Unity\
+-   Improved discoverability and workflow organization\
+-   Clear separation between MIT-licensed Rocketbox assets and AvatarX
+    additions
 
+These updates make the library dramatically easier to integrate into
+modern engines and pipelines.
 
+------------------------------------------------------------------------
 
-## Contributors
+## 🔗 Compatibility & Ecosystem
 
-Mar Gonzalez-Franco - Microsoft Research
+AvatarX is **100% compatible with PhonemeX Pro -- Unlimited
+Cross-Platform TTS with Phoneme Access**\
+Unity Asset Store:
+https://assetstore.unity.com/packages/tools/generative-ai/phonemex-pro-edition-unlimited-cross-platform-tts-with-phoneme-a-316336
 
-Markus Wojcik - Rocketbox (Original avatar creation team)
+Because the avatars use consistent humanoid rigs and standardized
+blendshape naming, they integrate seamlessly with PhonemeX Pro's
+advanced phoneme-driven facial animation system. You can:
 
-Eyal Ofek - Microsoft Research
+-   Generate natural lip-sync directly from TTS audio\
+-   Use phoneme-accurate viseme blending\
+-   Combine visemes with Rocketbox/AvatarX facial blendshapes\
+-   Create expressive speaking characters for NPCs, VR, training, and AI
+    agents
 
-Anthony Steed - University College London, (Visiting Researcher at Microsoft Research when this repo was conceived)
+**AvatarX + PhonemeX Pro** provides a complete pipeline for lightweight,
+expressive, real-time digital characters.
 
-Dave Garagan - Havok
+------------------------------------------------------------------------
 
-Matias Volonte - Northeastern University & Clemenson University (Creation of the blendshapes, and the headbox tool to transfer blendshapes procedurally between avatars)
+## 📚 Rocketbox Update History (Preserved)
 
-Fang Ma - Goldsmith University, Creation of blendshapes for Vive Tracker and ARkit
+AvatarX includes and preserves the improvements added to Rocketbox over
+time:
 
-## November 2020 License Update
+-   **2022:** ARKit-compatible blendshapes\
+-   **2022:** 417 compatible animations\
+-   **2022:** Headbox facial blendshape transfer library\
+-   **2022:** Facial blendshapes (15 visemes, 48 FACS, 30 Vive Tracker
+    shapes)\
+-   **2021:** Unreal batch importer\
+-   **2020:** MoveBox animation library\
+-   **2020:** MIT license update
 
-The library of avatars is now released under MIT License.
+All included assets remain under the MIT License.
 
+------------------------------------------------------------------------
 
-## Contributing
+## 🚀 Getting Started (Unity Workflow)
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+1.  Import the desired AvatarX model folder (FBX + textures) into your
+    Unity `Assets` directory.\
+2.  (Optional) Use provided import helpers to:
+    -   Correct 3dsMax material assumptions\
+    -   Fix transparency & specular issues\
+    -   Organize rigs into T-pose\
+    -   Select preferred poly density\
+3.  Drag the avatar prefab into your scene.\
+4.  (Optional) Add PhonemeX Pro for phoneme-driven lip-sync and
+    expressive facial animation.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+------------------------------------------------------------------------
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## 📂 Repository Structure
 
+    AvatarX/
+     ├── AvatarX_Models/               # MIT-licensed Rocketbox avatars
+     ├── AvatarX_Metadata/             # Rig notes, expressions, blendshape docs
+     ├── AvatarX_Unity/                # Unity helpers and sample setups
+     ├── AvatarX_Samples/              # Example scenes
+     ├── LICENSE_Rocketbox.txt         # Original MIT license
+     └── THIRD_PARTY_NOTICES.md        # Attribution + citations
+
+------------------------------------------------------------------------
+
+## 🙏 Original Rocketbox Contributors
+
+Mar Gonzalez-Franco\
+Markus Wojcik\
+Eyal Ofek\
+Anthony Steed\
+Dave Garagan\
+Matias Volonte\
+Fang Ma\
+And many other contributors acknowledged in the original library.
+
+Their work made this avatar library possible.
+
+------------------------------------------------------------------------
+
+## 📜 License
+
+AvatarX includes assets originally from **Microsoft Rocketbox**,
+licensed under the **MIT License**.\
+All original license files and attribution are preserved.
+
+All AvatarX additions in this repository are also MIT-licensed.
+
+------------------------------------------------------------------------
+
+## 🤝 Contributing
+
+Contributions to improve structure, metadata, tooling, or integrations
+are welcome.
